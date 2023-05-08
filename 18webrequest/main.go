@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const url = "https://lco.dev"
+const url string = "https://lco.dev"
 
 func main() {
 	fmt.Println("Welcome to Web Request in Golang")

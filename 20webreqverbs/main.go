@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strings"
@@ -27,7 +27,7 @@ func PerformGetResponse() {
 	fmt.Println("Content length is:", response.ContentLength)
 
 	var responseString strings.Builder
-	content, _ := ioutil.ReadAll(response.Body)
+	content, _ := io.ReadAll(response.Body)
 
 	byteCount, _ := responseString.Write(content)
 
@@ -54,7 +54,7 @@ func PerfromPostJsonRequest() {
 	}
 	defer response.Body.Close()
 
-	content, _ := ioutil.ReadAll(response.Body)
+	content, _ := io.ReadAll(response.Body)
 	fmt.Println(string(content))
 
 }
@@ -72,7 +72,7 @@ func PerformPostFormRequest() {
 	if err != nil {
 		panic(err)
 	}
-	content, _ := ioutil.ReadAll(response.Body)
+	content, _ := io.ReadAll(response.Body)
 	defer response.Body.Close()
 
 	fmt.Println(string(content))

@@ -10,9 +10,9 @@ import (
 
 func main() {
 	fmt.Println("Welcome to web verb in Golang")
-	//PerformGetResponse()
+	PerformGetResponse()
 	//PerfromPostJsonRequest()
-	PerformPostFormRequest()
+	//PerformPostFormRequest()
 }
 func PerformGetResponse() {
 	const myurl string = "http://localhost:8000/get"
@@ -22,15 +22,17 @@ func PerformGetResponse() {
 	}
 
 	defer response.Body.Close()
+	fmt.Println("Response is", response)
 	fmt.Println("Status Code:", response.StatusCode)
 	fmt.Println("Content length is:", response.ContentLength)
 
 	var responseString strings.Builder
 	content, _ := ioutil.ReadAll(response.Body)
+
 	byteCount, _ := responseString.Write(content)
 
 	fmt.Println("ByteCount is", byteCount)
-	fmt.Println(responseString.String()) //It will give all the hold by "responseString"
+	fmt.Println(responseString.String()) //It will give all the hold by "responseString" similar to "string(content)"
 	//fmt.Println(content)
 	//fmt.Println(string(content))
 
@@ -40,7 +42,7 @@ func PerfromPostJsonRequest() {
 	// fake json payload
 	requestBody := strings.NewReader(`
 		{
-			"cousrsename":"Let's started with Golang",
+			"cousrsename":"Let's start with Golang",
 			"price":0,
 			"platform":"youtube"
 		}

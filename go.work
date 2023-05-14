@@ -1,0 +1,26 @@
+go 1.20
+
+use (
+	./01hello
+	./02variables
+	./03userinput
+	./04conversion
+	./05mytime
+	./06mypointer
+	./07myarray
+	./08myslices
+	./09mymaps
+	./10mystructs
+	./11myiflese
+	./12myswitch
+	./13myloops
+	./14functions
+	./15methods
+	./16defers
+	./17readfiles
+	./18webrequest
+	./19urls
+	./20webreqverbs
+	./21bitmorejson
+	./22mymodule
+)

@@ -9,18 +9,18 @@ import (
 )
 
 func main() {
-	fmt.Println("Welcome to mod in golang")
+	fmt.Println("Hello mod in golang")
 	greeter()
 	r := mux.NewRouter()
 	r.HandleFunc("/", serveHome).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":4000", r)) // Listen on port 40000 and r is the router
+	log.Fatal(http.ListenAndServe(":4000", r))
 }
 
 func greeter() {
-	fmt.Println("Welcome there mod users")
+	fmt.Println("Hey there mod users")
 }
 
 func serveHome(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("<h1>Welcome to Golang Exercise on YouTube</h1>"))
+	w.Write([]byte("<h1>Welcome to golang series on YouTube</h1>"))
 }

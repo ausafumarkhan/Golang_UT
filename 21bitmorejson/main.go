@@ -56,14 +56,14 @@ func DecodeJson() {
 		fmt.Println("Json was not valid")
 	}
 	// Some cases we just want to add data into key value pair
-	// key can be a string but there is no guarantee of value' datatype so we use "interface"
+	// key can be a string but there is no guarantee of value's datatype so we use "interface"
 
 	var myOnlineData map[string]interface{}
 	json.Unmarshal(jsonDataFromWeb, &myOnlineData)
 	fmt.Printf("%#v\n", myOnlineData)
 
 	for k, v := range myOnlineData {
-		fmt.Printf("Key is %v and value is %v. Tyep of value is %T\n", k, v, v)
+		fmt.Printf("Key is %v and value is %v. Type of value is %T\n", k, v, v)
 	}
 
 }

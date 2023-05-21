@@ -23,4 +23,5 @@ use (
 	./20webreqverbs
 	./21bitmorejson
 	./22mymodule
+	./23buildapi
 )

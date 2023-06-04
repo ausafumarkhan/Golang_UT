@@ -25,4 +25,7 @@ use (
 	./22mymodule
 	./23buildapi
 	./24mongoDB
+	./25goroutine
+	./26mutexesANDwaitgroup
+	./27channel
 )

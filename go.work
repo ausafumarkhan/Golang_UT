@@ -28,4 +28,5 @@ use (
 	./25goroutine
 	./26mutexesANDwaitgroup
 	./27channel
+	./28mymaths
 )
